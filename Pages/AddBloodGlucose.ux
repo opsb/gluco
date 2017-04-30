@@ -1,0 +1,26 @@
+<Page ux:Class="AddBloodGlucose" Gained="{gained}" Placed="{placed}">
+    <JavaScript File="AddBloodGlucose.js" />
+    <Router ux:Dependency="router" />
+    <Activated Handler="{activated}">
+      <GiveFocus Target="bloodGlucoseLevel"></GiveFocus>
+    </Activated>
+
+    <DockPanel>
+        <pan.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Add blood glucose</pan.Text>
+
+        <StackPanel>
+            <pan.TextInput ux:Name="bloodGlucoseLevel" Value="{bloodGlucoseLevel}" PlaceholderText="Blood glucose level" Height="50" Padding="5" InputHint="Integer">
+                <Rectangle Layer="Background">
+                    <Stroke Width="2" Brush="#BBB" />
+                </Rectangle>
+            </pan.TextInput>
+
+            <Grid ColumnCount="2" Dock="Bottom">
+                <pan.Button Text="Add" Clicked="{add}" />
+                <pan.Button Text="Cancel" Clicked="{cancel}" />
+            </Grid>
+
+        </StackPanel>
+
+    </DockPanel>
+</Page>

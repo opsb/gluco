@@ -1,0 +1,26 @@
+<pan.Page ux:Class="Readings">
+    <Router ux:Dependency="router" />
+    <JavaScript File="Readings.js" />
+
+    <DockPanel>
+        <pan.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Readings</pan.Text>
+        <Activated Handler="{activated}">
+        </Activated>
+
+        <StackPanel>
+            <Rectangle ux:Class="Separator" Height="1" Fill="#fff4" />
+
+            <Each Items="{bloodGlucoseReadings}">
+                <Separator />
+                <Text Color="White" Value="{time} {ml}" Margin="20" />
+                <Separator />
+            </Each>
+
+            <Grid ColumnCount="2" Dock="Top">
+                <pan.Button Text="Back" Clicked="{goBack}" />
+            </Grid>
+
+        </StackPanel>
+
+    </DockPanel>
+</pan.Page>

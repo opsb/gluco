@@ -1,0 +1,13 @@
+<pan.Page ux:Class="HomePage">
+    <Router ux:Dependency="router" />
+
+    <JavaScript File="HomePage.js" />
+
+    <DockPanel>
+        <pan.Text FontSize="30" TextAlignment="Center" Dock="Top" Margin="0,50">Dashboard</pan.Text>
+        <StackPanel>
+            <pan.Button Text="Add blood glucose" Clicked="{goToAddBloodGlucose}"/>
+            <pan.Button Text="Readings" Clicked="{goToReadings}"/>
+        </StackPanel>
+    </DockPanel>
+</pan.Page>
